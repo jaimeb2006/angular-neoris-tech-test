@@ -45,7 +45,7 @@ npm run test
 
 ### Resultados de los Test
 
-------------------------------------------|---------|----------|---------|---------|-----------------------------------File | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+File | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 ------------------------------------------|---------|----------|---------|---------|-----------------------------------All files | 79.32 | 55.88 | 70.58 | 79.48 |  
  core/models | 81.81 | 100 | 60 | 81.81 |  
  financial-product.model.ts | 81.81 | 100 | 60 | 81.81 | 38-43  
@@ -62,12 +62,8 @@ shared/components/banco-logo | 100 | 100 | 100 | 100 |
  banco-logo.component.html | 100 | 100 | 100 | 100 |  
  banco-logo.component.ts | 100 | 100 | 100 | 100 |  
  shared/components/notification-confirmar | 100 | 100 | 100 | 100 |  
- notification-confirmar.component.html | 100 | 100 | 100 | 100 |  
- notification-confirmar.component.ts | 100 | 100 | 100 | 100 |  
- shared/components/notification-pop-up | 58.33 | 100 | 33.33 | 58.33 |  
  notification-pop-up.component.html | 100 | 100 | 100 | 100 |  
- notification-pop-up.component.ts | 54.54 | 100 | 33.33 | 54.54 | 21-28  
-------------------------------------------|---------|----------|---------|---------|-----------------------------------
+ notification-pop-up.component.ts | 54.54 | 100 | 33.33 | 54.54 | 21-28
 
 ## Contribuciones
 
