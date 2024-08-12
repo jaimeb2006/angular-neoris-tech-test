@@ -10,4 +10,5 @@
 .banco-logo {
   max-width: 200px; /* Asegura que la imagen sea responsiva */
   max-height: 80px; /* Limita la altura para que no exceda el contenedor */
+  margin-bottom: 5px;
 }

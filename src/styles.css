@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e0e0e0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #102659;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.confirmation-popup {
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  position: fixed; /* Overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.confirmation-message {
+  font-size: 16px;
+  margin-bottom: 40px;
+  padding-bottom: 60px;
+  margin: 10px 30px;
+}
+
+.btn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.cancel-button {
+  background-color: #cbc9c9;
+  color: #102659;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.confirm-button {
+  background-color: #eace14;
+  color: #333;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.confirmation-buttons,
+.confirmation-message {
+  background-color: white;
+  font-size: smaller;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}

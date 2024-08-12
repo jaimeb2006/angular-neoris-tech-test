@@ -174,7 +174,7 @@ product-table th #product-logo {
   position: absolute;
   right: 10px;
   top: 50%;
-  transform: translateY(-120%);
+  transform: translateY(-70%);
   pointer-events: none;
   color: #6e6e6e;
 }
