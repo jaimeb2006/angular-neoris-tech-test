@@ -29,6 +29,9 @@
   font-size: small;
   cursor: pointer;
 }
+.add-button:hover {
+  font-weight: bold;
+}
 .fa-info-circle {
   width: 15px;
   height: 15px;
@@ -171,7 +174,7 @@ product-table th #product-logo {
   position: absolute;
   right: 10px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-120%);
   pointer-events: none;
   color: #6e6e6e;
 }
