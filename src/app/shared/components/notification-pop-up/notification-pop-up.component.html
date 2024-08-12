@@ -1,0 +1,14 @@
+<div class="confirmation-popup" *ngIf="show">
+  <div class="confirmation-content">
+    <p class="confirmation-message">
+      {{ message }}
+    </p>
+    <div class="container-icon">
+      <i *ngIf="messageType === 'success'" class="fa fa-check-circle"></i>
+      <i *ngIf="messageType === 'error'" class="fa fa-exclamation-circle"></i>
+    </div>
+    <div class="confirmation-buttons">
+      <button (click)="closePopup()" class="btn cancel-button">Cancelar</button>
+    </div>
+  </div>
+</div>

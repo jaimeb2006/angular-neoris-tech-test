@@ -1,0 +1,18 @@
+.fa-check-circle,
+.fa-exclamation-circle {
+  color: green;
+  font-size: 40px;
+  background-color: white;
+}
+.fa-exclamation-circle {
+  color: red;
+}
+.confirmation-message {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.container-icon {
+  background-color: white;
+  margin-bottom: 20px;
+}

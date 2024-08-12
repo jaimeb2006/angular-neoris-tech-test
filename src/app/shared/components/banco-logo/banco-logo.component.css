@@ -1,0 +1,13 @@
+/* banco-logo.component.css */
+.banco-logo-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100px; /* O la altura que desees para tu contenedor del logo */
+  background-color: white;
+}
+
+.banco-logo {
+  max-width: 200px; /* Asegura que la imagen sea responsiva */
+  max-height: 80px; /* Limita la altura para que no exceda el contenedor */
+}

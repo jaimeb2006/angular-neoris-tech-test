@@ -1,0 +1,253 @@
+.product-list-container {
+  margin: 0 auto;
+  padding: 80px 60px;
+  background-color: #e0e0e0;
+}
+
+.search-containe {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-input {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  width: 250px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+.add-button {
+  background-color: #eace14;
+  border: none;
+  padding: 5px 20px;
+  font-size: small;
+  cursor: pointer;
+}
+.fa-info-circle {
+  width: 15px;
+  height: 15px;
+  color: #6e6e6e;
+}
+.product-table thead {
+  color: #6e6e6e;
+}
+.product-table .product-logo {
+  text-align: center;
+}
+
+.product-table td,
+.records-info,
+.pagination-nav {
+  background-color: white;
+}
+.product-table {
+  font-size: small;
+}
+.product-table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.container-table {
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+}
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.product-table th,
+.product-table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+product-table th #product-logo {
+  text-align: center;
+}
+
+.product-table td img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+.kebab-menu-cell {
+  position: relative;
+}
+
+.kebab-menu {
+  cursor: pointer;
+  background-color: white;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #102659;
+  color: white;
+}
+
+.total-results {
+  font-size: small;
+  background-color: white;
+}
+
+.records-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skeleton {
+  height: 20px;
+  background-color: #e0e0e0;
+  animation: pulse 1.5s infinite ease-in-out;
+  margin-bottom: 6px;
+}
+
+.product-table {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.product-table th,
+.product-table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.records-info .custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+}
+
+.records-info select {
+  border-radius: 5px;
+  padding: 5px 30px 5px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Arial", sans-serif;
+  border: 1px solid #ccc;
+}
+
+.records-info {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.records-info .fa-sort-desc {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6e6e6e;
+}
+
+@media screen and (max-width: 850px) {
+  .product-table {
+    display: block;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6e6e6e;
+  border-radius: 10px;
+}
+
+.product-table td {
+  overflow: visible;
+}
+
+.pagination {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: smaller;
+  background-color: white;
+}
+
+.page-item {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-item span {
+  display: block;
+  padding: 5px 10px;
+  color: #102659;
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.page-item.active span,
+.page-item.active span:hover {
+  color: #ffffff;
+  background-color: #102659;
+  border-color: #102659;
+}
+
+.page-item.disabled span {
+  color: #cccccc;
+  cursor: not-allowed;
+}
+
+.page-item:hover span {
+  background-color: #eeeeee;
+}
+
+.page-item.disabled:hover span {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 500px) {
+  .search-containe {
+    flex-direction: column;
+  }
+  .search-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .product-list-container {
+    padding: 30px 10px;
+  }
+}

@@ -1,0 +1,118 @@
+<!-- product-list.component.html -->
+<div class="product-list-container">
+  <div class="search-containe">
+    <input
+      [formControl]="searchControl"
+      type="text"
+      class="search-input"
+      placeholder="Search..."
+    />
+    <button (click)="editProduct(null)" class="add-button">Agregar</button>
+  </div>
+
+  <div class="container-table">
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th class="product-logo">Logo</th>
+          <th>Nombre del producto</th>
+          <th>Descripción <i class="fa fa-info-circle"></i></th>
+          <th>
+            Fecha de liberación
+            <i class="fa fa-info-circle"></i>
+          </th>
+          <th>Fecha de reestructuración <i class="fa fa-info-circle"></i></th>
+          <th>{{ " " }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="loading" class="skeleton">
+          <td colspan="6">
+            <div class="spinner"></div>
+          </td>
+        </tr>
+
+        <tr *ngFor="let product of financialProducts; let i = index">
+          <td class="product-logo">
+            <img
+              src="{{ product.logoUrl }}"
+              alt="Logo"
+              onerror="this.onerror=null;this.src='../../../assets/image-not-found-icon-E.jpg';"
+            />
+          </td>
+          <td>{{ product.name }}</td>
+          <td>
+            {{ product.description }}
+          </td>
+          <td>{{ product.releaseDate | date : "dd/MM/yyyy" }}</td>
+          <td>{{ product.revisionDate | date : "dd/MM/yyyy" }}</td>
+          <td class="kebab-menu-cell">
+            <div class="kebab-menu-cell">
+              <div class="kebab-menu" (click)="toggleDropdown(i)">
+                <i class="fa fa-ellipsis-v"></i>
+              </div>
+              <div class="dropdown-content" *ngIf="selectedDropdownIndex === i">
+                <a (click)="editProduct(product)">Editar</a>
+                <a (click)="deleteProduct(product)">Eliminar</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination-controls">
+      <div class="records-info">
+        <p class="total-results">{{ totalProducts }} Resultados</p>
+        <div class="custom-select-wrapper">
+          <select [formControl]="registerControl" name="miselect">
+            <option [value]="item" *ngFor="let item of lista">
+              {{ item }}
+            </option>
+          </select>
+          <i class="fa fa-sort-desc" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <!-- Navegación de paginación -->
+      <ul class="pagination">
+        <li
+          class="page-item"
+          [class.disabled]="currentPage === 1"
+          (click)="navigateToPage(1)"
+        >
+          <span class="page-link">««</span>
+        </li>
+        <li
+          class="page-item"
+          [class.disabled]="currentPage === 1"
+          (click)="navigateToPage(currentPage - 1)"
+        >
+          <span class="page-link">«</span>
+        </li>
+        <!-- Generar números de página -->
+        <li
+          class="page-item"
+          *ngFor="let page of pages"
+          [class.active]="currentPage === page"
+          (click)="navigateToPage(page)"
+        >
+          <span class="page-link">{{ page }}</span>
+        </li>
+        <li
+          class="page-item"
+          [class.disabled]="currentPage === totalPages"
+          (click)="navigateToPage(currentPage + 1)"
+        >
+          <span class="page-link">»</span>
+        </li>
+        <li
+          class="page-item"
+          [class.disabled]="currentPage === totalPages"
+          (click)="navigateToPage(totalPages)"
+        >
+          <span class="page-link">»»</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

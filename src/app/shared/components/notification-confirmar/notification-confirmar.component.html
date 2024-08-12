@@ -1,0 +1,13 @@
+<div class="confirmation-popup" *ngIf="show">
+  <div class="confirmation-content">
+    <p class="confirmation-message">
+      ¿Estás seguro de eliminar el producto {{ title }} ?
+    </p>
+    <div class="confirmation-buttons">
+      <button (click)="closePopup()" class="btn cancel-button">Cancelar</button>
+      <button (click)="confirmDelete()" class="btn confirm-button">
+        Confirmar
+      </button>
+    </div>
+  </div>
+</div>

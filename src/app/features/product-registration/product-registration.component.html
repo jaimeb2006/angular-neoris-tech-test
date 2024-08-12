@@ -1,0 +1,153 @@
+<div class="form-container">
+  <h2 *ngIf="!isEditMode" class="form-title">Formulario de Registro</h2>
+  <h2 *ngIf="isEditMode" class="form-title">Formulario de Edicion</h2>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input
+          type="text"
+          formControlName="id"
+          [style.background]="isEditMode ? '#ccc' : 'white'"
+        />
+        <span
+          class="error-message"
+          *ngIf="
+            productForm.get('id')?.touched &&
+            productForm.get('id')?.hasError('required')
+          "
+        >
+          ID es requerido.
+        </span>
+        <span
+          class="error-message"
+          *ngIf="productForm.get('id')?.hasError('minlength')"
+        >
+          ID debe tener al menos 3 caracteres.
+        </span>
+        <span
+          class="error-message"
+          *ngIf="productForm.get('id')?.hasError('maxlength')"
+        >
+          ID no debe exceder los 10 caracteres.
+        </span>
+        <span
+          class="error-message"
+          *ngIf="productForm.get('id')?.hasError('idTaken')"
+        >
+          ID ya existe, elige otro.
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" formControlName="name" />
+        <span
+          class="error-message"
+          *ngIf="
+            productForm.get('name')?.touched &&
+            productForm.get('name')?.hasError('required')
+          "
+        >
+          Nombre es requerido.
+        </span>
+        <span
+          class="error-message"
+          *ngIf="productForm.get('name')?.hasError('minlength')"
+        >
+          Nombre debe tener al menos 5 caracteres.
+        </span>
+        <span
+          class="error-message"
+          *ngIf="productForm.get('name')?.hasError('maxlength')"
+        >
+          Nombre no debe exceder los 100 caracteres.
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <input type="text" formControlName="description" />
+        <span
+          class="error-message"
+          *ngIf="
+            productForm.get('description')?.touched &&
+            productForm.get('description')?.hasError('required')
+          "
+        >
+          Descripción es requerida.
+        </span>
+        <span
+          class="error-message"
+          *ngIf="productForm.get('description')?.hasError('minlength')"
+        >
+          Descripción debe tener al menos 10 caracteres.
+        </span>
+        <span
+          class="error-message"
+          *ngIf="productForm.get('descripcion')?.hasError('maxlength')"
+        >
+          Descripción no debe exceder los 200 caracteres.
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="logo">Logo</label>
+        <input type="text" formControlName="logo" />
+        <span
+          class="error-message"
+          *ngIf="
+            productForm.get('logo')?.touched &&
+            productForm.get('logo')?.hasError('required')
+          "
+        >
+          Logo es requerido.
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="release_date">Fecha Liberación</label>
+        <input type="date" formControlName="release_date" />
+        <span
+          class="error-message"
+          *ngIf="
+            productForm.get('release_date')?.touched &&
+            productForm.get('release_date')?.hasError('required')
+          "
+        >
+          La Fecha es requerida.
+        </span>
+        <span
+          class="error-message"
+          *ngIf="
+            productForm.get('release_date')?.hasError('releaseDateInvalid')
+          "
+        >
+          La Fecha debe ser igual o mayor a la fecha actual
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="fecha-revision">Fecha Revisión</label>
+        <input
+          type="date"
+          formControlName="revision_date"
+          style="background: #ccc"
+        />
+      </div>
+      <div class="container-spinner" *ngIf="isLoading">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="button" routerLink="/product-list" class="btn reset">
+        Atras
+      </button>
+      <button type="button" (click)="resetForm()" class="btn reset">
+        Reiniciar
+      </button>
+      <button
+        type="submit"
+        class="btn submit"
+        [disabled]="!productForm.valid || isLoading"
+      >
+        {{ isEditMode ? "Editar" : "Enviar" }}
+      </button>
+    </div>
+  </form>
+</div>
