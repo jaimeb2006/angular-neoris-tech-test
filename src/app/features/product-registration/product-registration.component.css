@@ -1,8 +1,7 @@
 .form-container {
   max-width: 600px;
-  margin: auto;
-  padding: 20 0px;
-  margin-top: 20px;
+  margin: 20px auto;
+  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background: white;
 }
@@ -32,7 +31,7 @@
 .form-group {
   padding: 5px 5px 0 5px;
   background-color: white;
-  margin: 5px 10px;
+  margin: 5px 20px 5px 0;
 }
 
 .form-group label {
