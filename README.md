@@ -1,4 +1,4 @@
-# Prueba Técnica Angular Developer - NEORIS
+# Prueba Técnica Angular Developer 
 
 ## Sobre el Proyecto
 
@@ -20,7 +20,7 @@ Este proyecto ha sido desarrollado por Jaime Benalcazar como una solución moder
 
 Este proyecto está desplegado y disponible para su acceso público en Firebase. Puedes ver la aplicación en funcionamiento a través del siguiente enlace:
 
-[Prueba Técnica Angular Developer - NEORIS en Firebase](https://angular-neoris-tech-test.web.app/product-list)
+[Prueba Técnica Angular Developer - en Firebase](https://angular-tech-test.web.app/)
 
 ## Instalación y Ejecución
 
